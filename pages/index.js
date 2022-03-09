@@ -3,13 +3,13 @@ import { useTranslation } from "react-i18next"
 
 export default function Home() {
 
-  //t = text
+  //t = template
   const [t,i18n] = useTranslation("global")
 
   return (
     <>
       <button onClick={() => i18n.changeLanguage("es")}>Español</button>
-      <button>Portuguese</button>
+      <button onClick={() => i18n.changeLanguage("pt")}>Portugues</button>
       <button onClick={() => i18n.changeLanguage("en")}>Ingles</button>
 
       <ul>
