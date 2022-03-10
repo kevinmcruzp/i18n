@@ -1,5 +1,6 @@
 {
   "header": {
-    "hello-world": "Hello Word"
+    "hello-world": "Hello Word",
+    "title": "Title"
   }
 }
