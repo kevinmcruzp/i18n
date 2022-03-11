@@ -10,9 +10,7 @@ export default function Home() {
   const [language, setLanguage] = useState();
 
   if (typeof window !== 'undefined' && language !== undefined) {
-    // Perform localStorage action
     localStorage.setItem("language", language)
-
   }
 
   function changeLang(lang) {

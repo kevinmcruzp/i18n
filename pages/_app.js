@@ -17,12 +17,25 @@ function changeLanguage() {
   }
 }
 
+function getBrowserLanguage() {
+  if (typeof window !== 'undefined') {
+    let browserLang = navigator.language
+
+    let browserLanguage = browserLang.split("-")
+
+    return browserLanguage[0];
+  }
+}
+
 
 i18next.init({
   interpolation: { escapeValue: false },
   lng: changeLanguage(),
   //Lenguaje default
-  fallbackLng: "es",
+  fallbackLng: getBrowserLanguage() !== "es" &&
+    getBrowserLanguage() !== "pt" &&
+    getBrowserLanguage() !== "en"
+    ? "pt" : getBrowserLanguage(),
 
   //Indicar los lenguajes y rutas en las que se encuentran
   resources: {
